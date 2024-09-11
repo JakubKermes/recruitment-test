@@ -8,7 +8,7 @@ use PHPUnit\Framework\Attributes\DataProvider;
 class EmailValidationTest extends TestCase
 {
     #[DataProvider("invalidEmailProvider")]
-    public function testInvalidEmailCannotPass(string $invalidEmail)
+    public function testInvalidEmailCannotPass(string $invalidEmail): void
     {
         $validator = new UserValidator();
 
@@ -16,7 +16,7 @@ class EmailValidationTest extends TestCase
     }
 
     #[DataProvider("validEmailProvider")]
-    public function testValidEmailCanPass($validEmail)
+    public function testValidEmailCanPass(string $validEmail): void
     {
         $validator = new UserValidator();
 
